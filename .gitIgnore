@@ -1,0 +1,4 @@
+.vs
+*.sql
+/Problems/bin
+/Problems/obj
