@@ -29,13 +29,19 @@ namespace Programs
         }
         public static string Reverse(string s)
         {
-          // return s.Replace("[^a-zA-Z0-9]", "");
+            string rev = string.Empty;
+            for(int i=s.Length-1; i>=0; i--)
+            {
+                rev += s[i];
+            }
+            // return s.Replace("[^a-zA-Z0-9]", "");
             //string nS = "";
             //string regPat = @"\[A-Za-z0-9]/g";
-            return Regex.Replace(s, @"[^A-Za-z0-9]", "").ToLower();
-          //  [^a - zA - Z0 - 9]
-           // nS = Regex.Replace(s, regPat, 1);
-           // return nS;
+            //return Regex.Replace(s, @"[^A-Za-z0-9]", "").ToLower();
+            //  [^a - zA - Z0 - 9]
+            // nS = Regex.Replace(s, regPat, 1);
+            // return nS;
+            return rev;
         }
     }
 }

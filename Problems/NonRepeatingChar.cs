@@ -50,5 +50,23 @@ namespace Programs
             return res;
         }
 
+        public static string Example(string s)
+        {
+            if (s.Length < 1) return null;
+            string result = null;
+            Dictionary<char, int> map = new();
+            foreach(char c in s)
+            {
+                map[c] = map.GetValueOrDefault(c, 0) + 1;
+
+            }
+            foreach(KeyValuePair<char, int> pair in map)
+            {
+                // int value = map[key];
+                //result += "{key}{value}";
+                result += $"{pair.Key}{pair.Value}";
+            }
+            return result;
+        }
     }
 }

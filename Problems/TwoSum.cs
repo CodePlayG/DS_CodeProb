@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,19 +13,32 @@ namespace Programs
     {
         public static int[] FindSummingNumbers(int[] num, int target)
         {
-            Dictionary<int, int> map = new();
-            for(int i=0; i<num.Length; i++)
+            var map = new Dictionary<int, int>(); // Simplified collection initialization
+            for (int i = 0; i < num.Length; i++)
             {
                 int complement = target - num[i];
-                if(map.ContainsKey(complement))
+                if (map.ContainsKey(complement))
                 {
-                    
-                    return [map[complement], i]; 
-                        //int[]
+                    return new int[] { complement, num[i] };
                 }
                 map[num[i]] = i;
             }
-            return []  ;
+            return Array.Empty<int>(); // Fixed return statement
+        }
+
+        public static int[] IndexOfNumberToTarget(int[] num, int target)
+        {
+            var map = new Dictionary<int, int>(); // Simplified collection initialization
+            for (int i = 0; i < num.Length; i++)
+            {
+                int complement = target - num[i];
+                if (map.ContainsKey(complement))
+                {
+                    return new int[] { map[complement], i }; // zero -based index to one-based index
+                }
+                map[num[i]] = i;
+            }
+            return Array.Empty<int>(); // Fixed return statement
         }
     }
 }

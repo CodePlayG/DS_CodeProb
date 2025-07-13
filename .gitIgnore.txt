@@ -1,3 +1,0 @@
-.vs
-/problems/bin
-/problems/obj
