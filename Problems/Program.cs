@@ -12,17 +12,18 @@ using System.Text.RegularExpressions;
 //string s1 = "abcde", s2 = "abccde";
 //Console.WriteLine(CommonItems.OneEdit(s1, s2));
 
-int bp = 16; int eR = 3;
-Console.WriteLine($"Total consumption is {TotalConsumption.Consumption(bp, eR)}");
+//int bp = 16; int eR = 3;
+//Console.WriteLine($"Total consumption is {TotalConsumption.Consumption(bp, eR)}");
 //int[] nums = [1, 1, 4, 4];
 //int n =SecondHighest.FindSecondHighest(nums);
 //Console.WriteLine("secondHighest number {0}", n);
 
-//string s = "abbc";
+string s = "pwwkew";
+int rs = NonRepeatingChar.LengthOfLongestSubstring(s);
 //string rs = NonRepeatingChar.Example(s);
 //int rs = NonRepeatingChar.IndexOfNonRepeatingChar(s);
 ////char? rs = NonRepeatingChar.CharNonRepeating(s);
-//Console.WriteLine("index of non repeating character is  {0}",rs);
+Console.WriteLine("index of non repeating character is  {0}",rs);
 
 //Console.WriteLine("Hello, World!");
 //Console.WriteLine(Fibonacci.fibDynamic(-1));

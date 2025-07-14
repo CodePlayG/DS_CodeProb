@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programs
 {
-    class NonRepeatingChar
+   internal class NonRepeatingChar
     {
         //First non-repeating char in given string
         public static char? CharNonRepeating(string s)
@@ -48,6 +48,34 @@ namespace Programs
                 }
             }
             return res;
+        }
+        /// <summary>
+        /// Longest Substring Without Repeating Characters
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+
+        public static int LengthOfLongestSubstring(string s)
+        {
+            if(string.IsNullOrEmpty(s)) return 0;
+            HashSet<char> set = new HashSet<char>();
+            //int res = set.Count;
+            if (s.Length >= 1)
+            {
+                for (int i = 0; i < s.Length; i++)
+                {
+                    if (!set.Add(s[i]))
+                    {
+                        break;
+                        //return set.Count;
+                        //res = i + 1;
+                    }
+                    //return res;
+
+                }
+            }
+            return set.Count;
+
         }
 
         public static string Example(string s)

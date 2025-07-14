@@ -23,7 +23,7 @@ namespace Programs
                 }
                 map[num[i]] = i;
             }
-            return Array.Empty<int>(); // Fixed return statement
+            return []; // Fixed return statement
         }
 
         public static int[] IndexOfNumberToTarget(int[] num, int target)
@@ -36,9 +36,9 @@ namespace Programs
                 {
                     return new int[] { map[complement], i }; // zero -based index to one-based index
                 }
-                map[num[i]] = i;
+                map[num[i]] = i;            
             }
-            return Array.Empty<int>(); // Fixed return statement
+            return []; // Fixed return statement
         }
     }
 }

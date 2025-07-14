@@ -51,7 +51,7 @@ namespace Problems
                 words[j] = temp;
             }
             // Join the reversed words into a single string
-            return string.Join(" ", words);
+            return string.Join("", words);
         }
 
 
